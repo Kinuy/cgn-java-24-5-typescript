@@ -87,5 +87,49 @@ if(isAdmin === false){
     console.log('isAdmin is false.');
 }
 
+//BONUS
+// for n=5
+/*
+    *
+   ***
+  *****
+ *******
+*********
+    *
+    *
+    *
+    *
+    *
+* */
+
+let n: number= 10;
+
+let line: string = "";
+let stammLine: string = "";
+
+for(let i: number=0;i<n;i++){
+    line += "\n";
+
+    for(let k: number=n-i;k>=0;k--) {
+        line += " ";
+        if(k==1) {
+            for(let p: number = 0;p<(i*2+1);p++) {
+                line += "*";
+                if(p===0 && i==0){
+                    stammLine = line
+                }
+            }
+        }
+    }
+}
+for(let i: number=0;i<n;i++){
+    line += stammLine;
+}
+
+console.log(line)
+
+
+
+
 
 
